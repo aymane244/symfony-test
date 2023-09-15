@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% form_theme eleveForm 'bootstrap_5_layout.html.twig' %}
+{% block body %}
+    {% include('header.html.twig') %}
+<div class="container mt-5">
+    <h1 class="text-center">Eleve</h1>
+<div class="text-center"><a href="{{ path('show_eleve') }}" class="btn btn-primary text-decoration-none">Eleve</a></div>
+    {{ form_start(eleveForm) }}
+    {{ form_row(eleveForm.fullname) }}
+        {{ form_row(eleveForm.dateNaissance) }}
+        {{ form_row(eleveForm.cne, {
+        }) }}
+        {{ form_row(eleveForm.sexe) }}
+        {{ form_row(eleveForm.photo) }}
+        {{ form_row(eleveForm.parent) }}
+        {{ form_row(eleveForm.niveau) }}
+        {{ form_row(eleveForm.annee_scolaire) }}
+        {{ form_row(eleveForm.service) }}
+        <button type="submit" class="btn btn-primary">Register</button>
+    {{ form_end(eleveForm) }}
+    </div>
+{% endblock %}

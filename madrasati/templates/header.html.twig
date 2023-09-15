@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{ path('show_annonce') }}">Annonce</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_annonce') }}">Ajouter annonce</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_niveau') }}">Ajouter un niveau</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_annee') }}">Ajouter une année scolaire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_service') }}">Ajouter un service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_parent') }}">Ajouter un parent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_eleve') }}">Ajouter un eleve</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{user.fullname}}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="{{ path('app_logout') }}">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
